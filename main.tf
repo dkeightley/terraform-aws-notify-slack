@@ -71,6 +71,7 @@ module "lambda" {
 
   create_package = false
   local_existing_package = "${path.module}/functions/notify_slack.zip"
+  cloudwatch_logs_retention_in_days = 7
 
   function_name = var.lambda_function_name
   description   = var.lambda_description
